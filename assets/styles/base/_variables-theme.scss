@@ -1,0 +1,38 @@
+// --------------------------------------------------------------------------------
+// VARIABLES - TEMPLATE
+// --------------------------------------------------------------------------------
+
+// TEMPLATE
+// --------------------------------------------------------------------------------
+$fixed-input-height: 										36px;
+$fixed-min-height:											480px;
+$fixed-min-width:											1024px;
+
+// FONTS
+// --------------------------------------------------------------------------------
+$template-font: 											Helvetica Neue,Helvetica,Arial,sans-serif;
+$template-font-color:										$color-dark-gray-400;
+$template-font-weight: 										$font-weight-regular;
+
+
+// BORDERS
+// --------------------------------------------------------------------------------
+$template-border-color: 									$color-light-gray-400;
+$template-border-radius: 									3px;
+
+
+
+// BUTTONS / ACTIONS
+// --------------------------------------------------------------------------------
+$template-button-disabled: 					            	$color-gray-200;
+$template-button-disabled-font-color:                   	$color-gray-900;
+
+$template-button-neutral: 					            	$color-gray-50;
+$template-button-neutral-font-color:                    	$color-gray-900;
+$template-button-neutral-hover: 				        	$color-gray-100;
+$template-button-neutral-hover-font-color:              	$color-gray-900;
+
+$template-button-primary: 					            	$color-orange-200;
+$template-button-primary-font-color:                    	$color-white-100;
+$template-button-primary-hover: 				        	$color-orange-300;
+$template-button-primary-hover-font-color:              	$color-white-100;

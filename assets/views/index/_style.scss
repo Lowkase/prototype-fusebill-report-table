@@ -1,0 +1,203 @@
+// --------------------------------------------------------------------------------
+// VIEW - INDEX
+//---------------------------------------------------------------------------------
+.v-index {
+
+	padding: $spacing-55;
+
+
+    .report-data {
+        overflow-x: auto;
+
+        .table {
+            border: 0;
+            border-radius: 0;
+
+            th {
+                background: $color-gray-50 !important;
+                border-radius: 0 !important;
+                color: $color-gray-900 !important;
+                font-weight: $font-weight-semibold !important;
+                text-shadow: none !important;
+                border-right: 1px solid #c4c4cd;
+            }
+
+            tr:nth-child(even) > td {
+                background: $color-gray-25;
+            }
+
+            .negative {
+            	color: $color-red;
+            }
+        }
+    }
+
+
+    .table-drilldown {
+        th {
+            text-align: right;
+        }
+
+        tr:nth-child(even) > td {
+            //background: $color-blue-highlight !important;
+        }
+
+        tr > td {
+            //background: $color-blue-highlight !important;
+            text-align: right;
+        }
+
+        [data-mrr-momentum-section="new"] > td {
+            background: $color-blue-highlight !important;
+        }
+
+        [data-mrr-momentum-section="expansion"] > td {
+            background: $color-green-highlight !important;
+        }
+
+        [data-mrr-momentum-section="churn"] > td {
+            background: $color-orange-highlight !important;
+        }
+
+        [data-mrr-momentum-section="contractions"] > td {
+            background: $color-purple-highlight !important;
+        }
+
+        [data-mrr-momentum-too-many="yes"] > td {
+            color: $color-blue-dark !important;
+        }
+
+        tr > td:first-child {
+            text-align: left;
+        }
+
+        tr.drilldown-subtotals > td, tr.drilldown-net-delta > td {
+			font-weight: $font-weight-semibold;
+        }
+
+        tr.drilldown-totals > td {
+            background: $color-white !important;
+			font-weight: $font-weight-semibold;
+			padding-bottom: $spacing-21;
+			padding-top: $spacing-21;
+        }
+
+    	.drilldown-col {
+        	position: relative;
+
+        	.drilldown-expand, .drilldown-collapse {
+        		@include position(absolute, $top: 10px, $left:8px);
+
+        		cursor: pointer;
+        		height: 16px;
+        		width: 16px;
+        	}
+
+			.drilldown-collapse {
+				display: none;
+			}
+
+        	span {
+        		display: block;
+        		margin-left: $spacing-21;
+        	}
+    	}
+    	.drilldown-col:hover {
+    		cursor: pointer;
+
+    		svg {
+    			fill: $color-blue-dark;
+    		}
+    		span {
+    			color: $color-blue-dark;
+    		}
+    	}
+
+
+    	.drilldown-row-0 {
+            .not-drilldown-col {
+                span {
+                    margin-left: $spacing-21;
+                }
+            }
+    	}
+
+    	.drilldown-row-1 {
+    		display: none;
+
+            > td {
+                @include font-size(0.8125); // 13px
+            }
+
+            .not-drilldown-col {
+                span {
+                    margin-left: ($spacing-21 * 2) + 13;
+                }
+            }
+
+	    	.drilldown-col {
+	        	.drilldown-expand, .drilldown-collapse {
+	        		@include position(absolute, $top: 8px, $left:$spacing-21 * 2);
+	        	}
+
+	        	span {
+	        		margin-left: ($spacing-21 * 2) + 13;
+	        	}
+	    	}
+    	}
+
+    	.drilldown-row-2 {
+    		display: none;
+
+            > td {
+                @include font-size(0.7500); // 12px
+            }
+
+            .not-drilldown-col {
+                span {
+                    margin-left: ($spacing-21 * 3) + 13;
+                } 
+            }
+    	}
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.report-data-prototype {
+		border: 1px solid $template-border-color !important;
+
+        .table {
+        	margin-bottom: 0;
+
+            th:last-child {
+            	border-right: 0;
+            }
+
+            td {
+            	border-right: 1px solid $template-border-color;
+            }
+            td:last-child {
+            	border-right: 0;
+            }
+        }	
+	}
+
+}
